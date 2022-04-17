@@ -33,7 +33,7 @@ def website(message):
 @bot.message_handler(commands=['help'])
 def help(message):
     marcup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-    start = types.KeyboardButton('start')
+    start = types.KeyboardButton('/start')
     website = types.KeyboardButton('/website')
     marcup.add(start, website)
     bot.send_message(message.chat.id, 'Ok',reply_markup=marcup)
